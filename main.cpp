@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     const QString appDir = QGuiApplication::applicationDirPath();
     const QString mainFile = QDir(appDir).filePath(QStringLiteral("main.qml"));
-    const QUrl url(mainFile);
+    const QUrl url = QUrl::fromLocalFile(mainFile);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
