@@ -1,4 +1,9 @@
-QT += quick
+QT += quick charts datavisualization gamepad multimedia network networkauth
+QT += opengl remoteobjects scxml sensors serialbus serialport svg
+QT += texttospeech virtualkeyboard webchannel webview websockets xmlpatterns
+win32 {
+    QT += quick3d bluetooth location nfc positioning purchasing winextras
+}
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
